@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for thedocumentation about the tasks.json format
+    "version": "0.1.0",
+    "isShellCommand": true,
+    //-p 指定目录；-w watch,检测文件改变自动编译
+    "args": [],
+    "showOutput": "always",
+    "problemMatcher": "$tsc",
+    "tasks": [
+        {
+            "taskName": "build",
+            "command": "tsc",
+            
+            "args": [
+                "-p",
+                "tsconfig.json"
+            ],
+            "isBuildCommand": true,
+        }
+    ]
+}

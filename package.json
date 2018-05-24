@@ -1,0 +1,25 @@
+{
+  "name": "dcard-doro",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "npm run build && npm run start",
+    "start": "node dist/main.js",
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "weiting",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "@types/dotenv-safe": "^5.0.0",
+    "@types/request": "^2.47.0",
+    "dotenv-safe": "^5.0.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  }
+}

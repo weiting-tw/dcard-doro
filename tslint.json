@@ -1,0 +1,180 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+      "align": [
+        true,
+        "parameters",
+        "statements"
+      ],
+      "ban": [
+        true,
+        [
+          "_",
+          "forEach",
+          "Don't rely on Underscore to perform loops. Either use a 'for of' loop or the native 'array.forEach': https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_each"
+        ],
+        [
+          "_",
+          "each",
+          "Don't rely on Underscore to perform loops. Either use a 'for of' loop or the native 'array.forEach': https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_each"
+        ],
+        [
+          "$",
+          "each",
+          "Don't rely on jQuery to perform loops. Either use a 'for of' loop or the native 'array.forEach': https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_each"
+        ],
+        [
+          "jQuery",
+          "each",
+          "Don't rely on jQuery to perform loops. Either use a 'for of' loop or the native 'array.forEach': https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_each"
+        ],
+        [
+          "angular",
+          "each",
+          "Don't rely on angular to perform loops. Either use a 'for of' loop or the native 'array.forEach': https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_each"
+        ]
+      ],
+      "comment-format": [
+        true,
+        "check-space",
+        "check-lowercase"
+      ],
+      "curly": true,
+      "eofline": true,
+      "forin": true,
+      "indent": [
+        true,
+        "spaces"
+      ],
+      "interface-name": [
+        true,
+        "never-prefix"
+      ],
+      "jsdoc-format": true,
+      "label-position": true,
+      "max-line-length": [
+        true,
+        140
+      ],
+      "member-access": true,
+      "member-ordering": [
+        true,
+        "public-before-private",
+        "static-before-instance",
+        "variables-before-functions"
+      ],
+      "no-angle-bracket-type-assertion": true,
+      "no-any": false,
+      "no-arg": true,
+      "no-bitwise": true,
+      "no-conditional-assignment": true,
+      "no-consecutive-blank-lines": false,
+      "no-console": [
+        true,
+        "debug",
+        "info",
+        "time",
+        "timeEnd",
+        "trace"
+      ],
+      "no-construct": true,
+      "no-constructor-vars": false,
+      "no-debugger": true,
+      "no-duplicate-variable": true,
+      "no-empty": true,
+      "no-eval": true,
+      "no-inferrable-types": false,
+      "no-internal-module": true,
+      "no-invalid-this": [
+        true,
+        "check-function-in-method"
+      ],
+      "no-null-keyword": true,
+      "no-reference": true,
+      "no-require-imports": false,
+      "no-shadowed-variable": true,
+      "no-string-literal": false,
+      "no-switch-case-fall-through": true,
+      "no-trailing-whitespace": true,
+      "no-unused-expression": true,
+      "no-var-keyword": true,
+      "no-var-requires": true,
+      "object-literal-sort-keys": false,
+      "one-line": [
+        true,
+        "check-open-brace",
+        "check-catch",
+        "check-else",
+        "check-finally",
+        "check-whitespace"
+      ],
+      "one-variable-per-declaration": true,
+      "quotemark": [
+        true,
+        "single",
+        "avoid-escape"
+      ],
+      "radix": true,
+      "semicolon": [
+        true,
+        "always"
+      ],
+      "switch-default": true,
+      "trailing-comma": [
+        false,
+        {
+          "multiline": "always",
+          "singleline": "never"
+        }
+      ],
+      "triple-equals": [
+        true,
+        "allow-null-check",
+        "allow-undefined-check"
+      ],
+      "typedef": [
+        true,
+        "call-signature",
+        "parameter",
+        "property-declaration",
+        "variable-declaration",
+        "member-variable-declaration"
+      ],
+      "typedef-whitespace": [
+        true,
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        },
+        {
+          "call-signature": "space",
+          "index-signature": "space",
+          "parameter": "space",
+          "property-declaration": "space",
+          "variable-declaration": "space"
+        }
+      ],
+      "use-isnan": true,
+      "variable-name": [
+        true,
+        "check-format",
+        "allow-leading-underscore",
+        "ban-keywords"
+      ],
+      "whitespace": [
+        true,
+        "check-branch",
+        "check-decl",
+        "check-module",
+        "check-operator",
+        "check-separator",
+        "check-type"
+      ],
+      "max-classes-per-file": [
+        false
+      ]
+    }
+  }

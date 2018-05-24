@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2015",
+      "es2016",
+      "dom"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "files": [
+    "src/main.ts"
+  ]
+}
