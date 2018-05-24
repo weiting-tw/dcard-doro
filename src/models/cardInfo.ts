@@ -6,7 +6,7 @@ export class DcardInfo {
 }
 
 export class Dcard {
-  public gender: string = '';
+  public gender: string;
   public department: string = '';
   public school: string = '';
   public grade: string = '';

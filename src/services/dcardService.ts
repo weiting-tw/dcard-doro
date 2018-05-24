@@ -12,10 +12,7 @@ export class DcardService {
   public static $inject: string[] = ['request'];
 
   constructor(
-    // private request: any,
-    // private acceptApi: string,
-    private cookie: string,
-    // private xCsrfToken: string
+    private cookie: string
   ) {
   }
 
@@ -31,33 +28,35 @@ export class DcardService {
         },
         followAllRedirects: true
       }, (error, response, body) => {
-        if (response.statusCode === 200) {
-          resolve(JSON.parse(body));
-        }
+        if (!error) { resolve(JSON.parse(body)); }
         reject();
       });
     });
   }
 
 
-  public sendAccept(message: string = 'hi'): void {
-    request.post({
-      url: acceptApi,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache',
-        'Cookie': this.cookie,
-        'x-csrf-token': xCsrfToken,
-      },
-      json: {
-        firstMessage: message
-      }
-      // headers: response.headers
-    }, (error, response, body) => {
-      if (!error) {
-        console.log(response.request.headers);
-        console.log(body);
-      }
+  public sendAccept(message: string = 'hi'): Promise<{ bothAccept: boolean }> {
+    return new Promise<{ bothAccept: boolean }>((resolve, reject) => {
+      request.post({
+        url: acceptApi,
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache',
+          'Cookie': this.cookie,
+          'x-csrf-token': xCsrfToken,
+        },
+        json: {
+          firstMessage: message
+        }
+        // headers: response.headers
+      }, (error, response, body) => {
+        // if (!error) {
+        //   console.log(response.request.headers);
+        //   console.log(body);
+        // }
+        if (!error) { resolve(JSON.parse(JSON.stringify(body))); }
+        reject();
+      });
     });
   }
 }
