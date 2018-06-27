@@ -1,4 +1,4 @@
-export const enum Gender {
+export enum Gender {
   F,
   M,
   both,
