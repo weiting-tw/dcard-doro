@@ -3,6 +3,8 @@
     "config:base"
   ],
   "labels": [
-    "renovate"  
+    "renovate",
+    "upgrade",
+    "bot"
   ]
 }
