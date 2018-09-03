@@ -5,14 +5,13 @@ import { DcardInfo } from './../models/cardInfo';
 const hostName: string = 'https://www.dcard.tw';
 const dacrdApi: string = `${hostName}/_api/dcard`;
 const acceptApi: string = `${hostName}/_api/dcard/accept`;
-// const cookie: string = process.env.DCARD_COOKIE || '';
-const xCsrfToken: string = 'eWPA8tWi-elC-Rd7bVeskMUvvrLC92hnxkX4';
 
 export class DcardService {
   public static $inject: string[] = ['request'];
 
   constructor(
-    private cookie: string
+    private cookie: string,
+    private xCsrfToken: string
   ) {
   }
 
@@ -43,7 +42,7 @@ export class DcardService {
           'Content-Type': 'application/json',
           'Cache-Control': 'no-cache',
           'Cookie': this.cookie,
-          'x-csrf-token': xCsrfToken,
+          'x-csrf-token': this.xCsrfToken,
         },
         json: {
           firstMessage: message

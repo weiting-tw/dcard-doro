@@ -6,8 +6,10 @@ dotenv.config({ allowEmptyValues: true });
 dotenv.load();
 
 const cookie: string = process.env.DCARD_COOKIE || '';
+const xCsrfToken: string = process.env.DCARD_XCSRF_TOKEN || '';
+
 const acceptGender: number = Number.parseInt(process.env.DCARD_ACCEPT_GENDER);
-const dcardService: DcardService = new DcardService(cookie);
+const dcardService: DcardService = new DcardService(cookie, xCsrfToken);
 const mailService: MailService = new MailService();
 
 dcardService.getDcardInfo().then(
