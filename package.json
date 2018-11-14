@@ -12,7 +12,6 @@
   "author": "weiting",
   "license": "MIT",
   "dependencies": {
-    "line-api": "^0.1.4",
     "request": "^2.88.0"
   },
   "devDependencies": {
