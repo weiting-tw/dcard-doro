@@ -15,11 +15,11 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "@sendgrid/mail": "^6.3.1",
-    "@types/dotenv-safe": "^5.0.2",
-    "@types/request": "^2.48.1",
-    "dotenv-safe": "^6.1.0",
-    "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
+    "@sendgrid/mail": "6.3.1",
+    "@types/dotenv-safe": "5.0.2",
+    "@types/request": "2.48.1",
+    "dotenv-safe": "6.1.0",
+    "tslint": "5.11.0",
+    "typescript": "3.1.6"
   }
 }
