@@ -17,7 +17,7 @@
   "devDependencies": {
     "@sendgrid/mail": "^6.3.1",
     "@types/dotenv-safe": "^5.0.2",
-    "@types/request": "^2.48.1",
+    "@types/request": "2.48.8",
     "dotenv-safe": "^6.1.0",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
